@@ -1,0 +1,41 @@
+create table users (
+  id int unsigned auto_increment not null,
+  first_name varchar(32) not null,
+  last_name varchar(32) not null,
+  date_created timestamp default now(),
+  is_admin boolean,
+  num_points int,
+  primary key (id)
+);
+
+mysql> desc users;
++--------------+------------------+------+-----+-------------------+----------------+
+| Field        | Type             | Null | Key | Default           | Extra          |
++--------------+------------------+------+-----+-------------------+----------------+
+| id           | int(10) unsigned | NO   | PRI | NULL              | auto_increment |
+| first_name   | varchar(32)      | NO   |     | NULL              |                |
+| last_name    | varchar(32)      | NO   |     | NULL              |                |
+| date_created | timestamp        | NO   |     | CURRENT_TIMESTAMP |                |
+| is_admin     | tinyint(1)       | YES  |     | NULL              |                |
+| num_points   | int(11)          | YES  |     | NULL              |                |
++--------------+------------------+------+-----+-------------------+----------------+
+
+-- insert some sample records
+insert into users (first_name, last_name) values ('deependra', 'yadav');
+insert into users (first_name, last_name) values ('Anuradha', 'Pura');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
